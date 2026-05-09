@@ -1,134 +1,294 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Yixuan Yang is a Ph.D. candidate in the School of Mathematical Sciences at Zhejiang University, working on deep learning theory, non-smooth optimization, and the mathematical foundations of data science." />
 <link rel="stylesheet" href="css/jemdoc.css" type="text/css" />
 <link rel="stylesheet" href="css/jacob.css" type="text/css" />
-<title>Yixuan Yang</title>
-<style type="text/css">
-body {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    color: #000;
+<title>Yixuan Yang | Zhejiang University</title>
+<style>
+:root {
+    --link: #21538d;
+    --heading: #21538d;
+    --title: #4a72b8;
+    --text: #111;
+    --line: #a8a8a8;
 }
-a {
-    color: #21538d; /* 截图中的深蓝色链接 */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: var(--text);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 17px;
+}
+
+#layout-content {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 18px 24px 30px;
+    border: none;
+    background: #fff;
+    text-align: left;
+}
+
+a,
+a > tt {
+    color: var(--link);
     text-decoration: none;
 }
+
 a:hover {
+    border-bottom: none;
     text-decoration: underline;
 }
-.section-title {
-    color: #21538d;
-    font-size: 1.3em;
-    font-weight: bold;
-    border-bottom: 1px solid #a8a8a8; /* 标题下方的细灰线 */
-    padding-bottom: 3px;
-    margin-top: 30px;
-    margin-bottom: 15px;
+
+a:focus-visible {
+    outline: 2px solid rgba(33, 83, 141, 0.45);
+    outline-offset: 2px;
 }
-.header-table {
-    border-collapse: collapse;
-    border: none;
-    margin-top: 20px;
-}
-.header-table td {
-    border: none;
-    padding: 0;
-    vertical-align: top;
-}
-.profile-img {
-    width: 160px; /* 调整为适合证件照/半身像的宽度 */
-    height: auto;
-    margin-right: 30px;
-}
-.info-text {
-    line-height: 1.6;
-    font-size: 1.05em;
-}
-.page-title {
-    color: #4A72B8; /* 经典的学术蓝 */
-    font-size: 1.8em; /* 字体大小 */
+
+#layout-content h1.page-title {
+    margin: 0 0 24px;
+    padding: 0 0 8px;
+    border-bottom: 3px double #999;
+    color: var(--title);
     font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 2rem;
     font-weight: bold;
-    border-bottom: 3px double #999; /* 这里的 3px double 是实现双下划线的核心 */
-    padding-bottom: 8px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    line-height: 1.15;
+}
+
+.profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 34px;
+    margin-bottom: 32px;
+}
+
+.profile-img {
+    flex: 0 0 auto;
+    width: 160px;
+    height: auto;
+    border: none;
+    display: block;
+}
+
+.info-text {
+    padding-top: 2px;
+    font-size: 1.04rem;
+    line-height: 1.6;
+}
+
+.info-text p {
+    margin: 0 0 0.55em;
+    line-height: 1.6;
+}
+
+.profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 18px;
+    margin-top: 16px;
+}
+
+.section {
+    margin-top: 28px;
+}
+
+#layout-content h2.section-title {
+    margin: 0 0 14px;
+    padding: 0 0 4px;
+    border-bottom: 1px solid var(--line);
+    color: var(--heading);
+    font-size: 1.34rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+p {
+    margin: 0 0 0.85em;
+    padding: 0;
+    line-height: 1.62;
+}
+
+.contact-note {
+    font-style: italic;
+}
+
+.research-list,
+.pub-list {
+    margin: 0.25em 0 0.9em 1.35em;
+    padding: 0;
+    line-height: 1.55;
+    list-style-position: outside;
+    list-style-type: square;
+}
+
+.research-list li {
+    margin-bottom: 0.35em;
+}
+
+.pub-list li {
+    margin-bottom: 1.05em;
+    padding-left: 0.1em;
+}
+
+.paper-title {
+    font-style: italic;
+}
+
+.authors,
+.venue {
+    display: block;
+    margin-top: 0.25em;
+}
+
+div#footer {
+    margin-top: 3.5em;
+}
+
+@media (max-width: 640px) {
+    body {
+        font-size: 16px;
+    }
+
+    #layout-content {
+        padding: 16px 18px 26px;
+    }
+
+    #layout-content h1.page-title {
+        margin-bottom: 22px;
+        font-size: 1.75rem;
+    }
+
+    .profile {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .profile-img {
+        width: 160px;
+        margin: 0 auto 18px;
+    }
+
+    .info-text {
+        max-width: none;
+        padding-top: 0;
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+    .info-text p {
+        line-height: 1.55;
+    }
+
+    .profile-links {
+        gap: 8px 18px;
+        margin-top: 14px;
+    }
+
+    .section {
+        margin-top: 28px;
+    }
+
+    #layout-content h2.section-title {
+        font-size: 1.28rem;
+    }
+
+    .research-list,
+    .pub-list {
+        margin-left: 1.25em;
+    }
+}
+
+@media (max-width: 420px) {
+    #layout-content {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    #layout-content h1.page-title {
+        font-size: 1.65rem;
+    }
 }
 </style>
 </head>
 <body>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
-</script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-      TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
-<table summary="Table for page layout." id="tlayout">
-<tr valign="top">
-<td id="layout-content">
+<main id="layout-content">
+<header>
+<h1 class="page-title">Yixuan Yang <span lang="zh-CN">(杨怡轩)</span></h1>
 
-<div class="page-title">Yixuan Yang (杨怡轩)</div>
-
-<table class="header-table">
-  <tr>
-    <td>
-      <img src="imgs/photo.jpg" alt="Yixuan Yang" class="profile-img" />
-    </td>
-    <td class="info-text">
-      Ph.D. Candidate<br />
-      <a href="http://www.math.zju.edu.cn/" target="_blank">School of Mathematical Sciences</a><br />
-      <a href="https://www.zju.edu.cn/" target="_blank">Zhejiang University</a><br /><br />
+<div class="profile">
+  <img src="imgs/photo.jpg" alt="Yixuan Yang" class="profile-img" width="160" height="224" />
+  <div class="info-text">
+    <p><strong>Ph.D. Candidate</strong></p>
+    <p>
+      <a href="http://www.math.zju.edu.cn/" target="_blank" rel="noopener noreferrer">School of Mathematical Sciences</a><br />
+      <a href="https://www.zju.edu.cn/" target="_blank" rel="noopener noreferrer">Zhejiang University</a>
+    </p>
+    <p>
       Office: 506, Hainayuan Building #2<br />
-      Email: yixuanyang [at] zju [dot] edu [dot] cn<br /><br />
-      
-      <a href="https://scholar.google.com/citations?user=psqj_twAAAAJ&hl=zh-CN" target="_blank">[Google Scholar]
-      </a> &nbsp;&nbsp; <a href="files/CV_Yixuan_Yang.pdf">[CV]</a>
-    </td>
-  </tr>
-</table>
-<div class="section-title">About me</div>
-<p style="text-align: justify; line-height: 1.6;">
-I am a fourth-year Ph.D. candidate in the <a href="http://www.math.zju.edu.cn/" target="_blank">School of Mathematical Sciences</a> at <a href="https://www.zju.edu.cn/" target="_blank">Zhejiang University</a>. I am advised by Prof. <a href="https://mathscinet.ams.org/mathscinet/author?authorId=310283" target="_blank">Song Li</a>. 
-Prior to that, I received my B.S. degree in Pure and Applied Mathematics from <a href="https://www.lzu.edu.cn/" target="_blank">Lanzhou University</a> in 2022.<br />
-<span style="font-style: italic;">Please feel free to contact me if you have any questions or would like to discuss my research.</span>
+      Email: yixuanyang [at] zju [dot] edu [dot] cn
+    </p>
+    <nav class="profile-links" aria-label="Profile links">
+      <a href="https://scholar.google.com/citations?user=psqj_twAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">[Google Scholar]</a>
+      <a href="files/CV_Yixuan_Yang.pdf">[CV]</a>
+    </nav>
+  </div>
+</div>
+</header>
+
+<section class="section" aria-labelledby="about-title">
+<h2 id="about-title" class="section-title">About me</h2>
+<p>
+I am a fourth-year Ph.D. candidate in the <a href="http://www.math.zju.edu.cn/" target="_blank" rel="noopener noreferrer">School of Mathematical Sciences</a> at <a href="https://www.zju.edu.cn/" target="_blank" rel="noopener noreferrer">Zhejiang University</a>, advised by Prof. <a href="https://mathscinet.ams.org/mathscinet/author?authorId=310283" target="_blank" rel="noopener noreferrer">Song Li</a>. Prior to that, I received my B.S. degree in Pure and Applied Mathematics from <a href="https://www.lzu.edu.cn/" target="_blank" rel="noopener noreferrer">Lanzhou University</a> in 2022.
 </p>
+<p class="contact-note">Please feel free to contact me if you have any questions or would like to discuss my research.</p>
+</section>
 
-<div class="section-title">Research Interests</div>
-My research primarily focuses on <b>mathematical foundations of Data Science</b>, specifically in deep learning theory and non-smooth optimization.
-I am also interested in theory, algorithm and application of transformer and Large Language Model.
-<ul style="line-height: 1.6;">
-  <li><b>Data Science Problems:</b> low-rank matrix recovery, phase retrieval and compressed sensing.</li>
-  <li><b>Deep Learning Theory:</b> optimization, generalization and explanation of neural collapse phenomenon.</li>
-  <li><b>Optimization:</b> Convergence and implicit bias of algorithms. </li>
+<section class="section" aria-labelledby="research-title">
+<h2 id="research-title" class="section-title">Research Interests</h2>
+<p>
+My research focuses on the <strong>mathematical foundations of data science</strong>, with an emphasis on deep learning theory and non-smooth optimization. I am also interested in the theory, algorithms, and applications of Transformers and large language models.
+</p>
+<ul class="research-list">
+  <li><strong>Data Science Problems:</strong> low-rank matrix recovery, phase retrieval, and compressed sensing.</li>
+  <li><strong>Deep Learning Theory:</strong> optimization, generalization, and explanation of neural collapse phenomena.</li>
+  <li><strong>Optimization:</strong> convergence and implicit bias of algorithms.</li>
 </ul>
+</section>
 
-<div class="section-title">Publications / Preprints</div>
-<ul style="line-height: 1.6;">
-    <li style="margin-bottom: 10px;">
-    <i><a href="http://arxiv.org/abs/2605.01897" target="_blank">How Label Imbalance Shapes Geometry: A General Spectral Analysis of Multi-Label Neural Collapse.</a></i> <br />
-    Xiaoxuan Ma, <b>Yixuan Yang</b>, Song Li, Xiangyun Hui<br />
-    arXiv preprint, 2026. <br />
+<section class="section" aria-labelledby="publications-title">
+<h2 id="publications-title" class="section-title">Publications / Preprints</h2>
+<ul class="pub-list">
+  <li>
+    <a class="paper-title" href="https://arxiv.org/abs/2605.01897" target="_blank" rel="noopener noreferrer">How Label Imbalance Shapes Geometry: A General Spectral Analysis of Multi-Label Neural Collapse.</a>
+    <span class="authors">Xiaoxuan Ma, <strong>Yixuan Yang</strong>, Song Li, Xiangyun Hui</span>
+    <span class="venue">arXiv:2605.01897, 2026.</span>
   </li>
-    <li style="margin-bottom: 10px;">
-    <i><a href="https://www.sciencedirect.com/science/article/pii/S0925231225020399" target="_blank">The implicit regularization of gradient flow on separable datasets in ReLU networks.</a></i> <br />
-    Xiangyun Hui, Xiaoxuan Ma, <b>Yixuan Yang</b>, Song Li<br />
-    Neurocomputing 2025. <br />
+  <li>
+    <a class="paper-title" href="https://www.sciencedirect.com/science/article/pii/S0925231225020399" target="_blank" rel="noopener noreferrer">The implicit regularization of gradient flow on separable datasets in ReLU networks.</a>
+    <span class="authors">Xiangyun Hui, Xiaoxuan Ma, <strong>Yixuan Yang</strong>, Song Li</span>
+    <span class="venue">Neurocomputing, 2025.</span>
   </li>
 </ul>
-
+</section>
 
 <div id="footer">
 <div id="footer-text">
 </div>
 </div>
-
-</td>
-</tr>
-</table>
+</main>
 </body>
 </html>
