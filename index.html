@@ -128,12 +128,26 @@ p {
 
 .research-list,
 .news-list,
+.software-list,
 .pub-list {
     margin: 0.25em 0 0.9em 1.35em;
     padding: 0;
     line-height: 1.55;
     list-style-position: outside;
     list-style-type: square;
+}
+
+.software-list li {
+    margin-bottom: 0.85em;
+}
+
+.software-title {
+    font-weight: bold;
+}
+
+.software-desc {
+    display: block;
+    margin-top: 0.2em;
 }
 
 .news-scroll {
@@ -226,6 +240,7 @@ div#footer {
 
     .research-list,
     .news-list,
+    .software-list,
     .pub-list {
         margin-left: 1.25em;
     }
@@ -262,6 +277,7 @@ div#footer {
     </p>
     <nav class="profile-links" aria-label="Profile links">
       <a href="https://scholar.google.com/citations?user=psqj_twAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">[Google Scholar]</a>
+      <a href="https://github.com/YixuanYang00">[GitHub]</a>
       <a href="files/CV_Yixuan_Yang.pdf">[CV]</a>
     </nav>
   </div>
@@ -299,6 +315,16 @@ My research focuses on the <strong>mathematical foundations of data science</str
 </ul>
 </section>
 
+<section class="section" aria-labelledby="software-title">
+<h2 id="software-title" class="section-title">Software</h2>
+<ul class="software-list">
+  <li>
+    <a class="software-title" href="https://github.com/YixuanYang00/math-beamer-slides-skill" target="_blank" rel="noopener noreferrer">math-beamer-slides-skill</a>
+    <span class="software-desc">A skill for creating, compiling, reviewing, and polishing rigorous mathematical Beamer/LaTeX slides.</span>
+  </li>
+</ul>
+</section>
+    
 <section class="section" aria-labelledby="publications-title">
 <h2 id="publications-title" class="section-title">Publications / Preprints</h2>
 <ul class="pub-list">
